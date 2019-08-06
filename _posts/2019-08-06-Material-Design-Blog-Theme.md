@@ -20,7 +20,7 @@ Go to the website to set up your Jekyll Environment
 - jekyll -v
 
 #### Step 2: Clone the Material Design Lite Blog Theme
-Use PowerShell and clone the Material Design Lite repository.
+Use PowerShell and clone the Material Design Lite repository. Make sure your computer have 'git' installed.
 
 `git clone https://github.com/johnnymythology/material-blog-jp.git`
 
