@@ -29,6 +29,8 @@ Run the following command to install the Gem required.
 
 `gem install material-blog-jp`
 
+`bundle install`
+
 #### Step 4: Start the web server
 Run the following command to start the web server:
 
