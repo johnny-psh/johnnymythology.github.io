@@ -1,4 +1,4 @@
 ---
 layout: search
-title: Material-blog-jp - Search
+title: Johnny Pan - Search
 ---
