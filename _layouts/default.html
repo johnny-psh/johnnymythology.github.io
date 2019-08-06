@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
+    <div class="demo-layout-transparent mdl-layout--fixed-header mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">{{ site.title }}</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation remove-mdl-navigation-link">
+                    <a class="mdl-navigation__link" href="/index.html">Home</a>
+                    <a class="mdl-navigation__link" href="/search.html">Search</a>
+                    <a class="mdl-navigation__link" href="/about.html">About</a>
+        
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">{{ site.title }}</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/index.html">Home</a>
+                <a class="mdl-navigation__link" href="/search.html">Search</a>
+                <a class="mdl-navigation__link" href="/about.html">About</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+         
+        </main>
+    </div>
+    </div>
 
-    {%- include header.html -%}
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
 
-    {%- include footer.html -%}
 
-  </body>
+    <div class="mdl-grid">
+        <div class="mdl-layout-spacer"></div>  
+        <div class="mdl-cell mdl-cell--4-col">    
+
+            {{ content }}
+    
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-arrowup-button-right back-to-top">
+            <i class="material-icons">arrow_upward</i>
+        </button>
+
+        {%- include footer.html -%}
+
+</body>
 
 </html>

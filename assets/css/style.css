@@ -1,0 +1,85 @@
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.demo-layout-transparent {
+    background: url('/assets/header.jpg') center / cover;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    color: white;
+}
+ 
+@media screen and (min-width: 800px) {
+    .demo-card-wide.mdl-card {
+        width: 800px;
+    }
+
+    .mdl-cell--4-col {
+        width:800px;
+    }
+    
+}
+
+/* Card CSS */
+
+@media screen and (max-width: 512px) {
+    .demo-card-wide.mdl-card {
+        max-width: 100%;
+    }
+
+    .remove-mdl-navigation-link {
+        display: none;
+    }
+
+    .demo-card-wide.mdl-card {
+        width: 512px;
+    }
+ }
+
+
+.demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 512px;
+    background: url('/assets/transparent.jpg') center / cover;
+}
+
+.demo-card-wide>.mdl-card__post {
+    color: #fff;
+    height: 60px;
+    padding:15px;
+    background: url('/assets/transparent.jpg') top / cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
+.mdl-arrowup-button-right {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+.nav-button {
+    width: 40px;
+    height: 40px;
+    min-width: initial;
+  }
+
+  .mdl-demo .mdl-layout__content section:not(:last-of-type) {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+
+
+
+

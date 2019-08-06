@@ -1,27 +1,27 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+ <!-- Cards -->
+ <div class="demo-card-wide mdl-card mdl-shadow--2dp"> 
+    <div class="mdl-card__post" style="background: url('/assets/{{ page.date | date: '%Y-%m-%d' }}.jpg') center / cover;">
+        <h2 class="mdl-card__title-text">{{ page.title }}</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{ page.date | date: '%b %d, %Y' }}
+    </div>
+    <div class="mdl-card__supporting-text" style="font-size: 1.3em">
+        {{ content }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border"> 
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect nav-button" href="{{page.previous.url}}">&lt;</a>
+         
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect nav-button" href="{{page.next.url}}">&gt;</a>
+    </div>
+   
+</div>
+<div>&nbsp;</div>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</div>
+<div class="mdl-layout-spacer"></div> 
+</div>
